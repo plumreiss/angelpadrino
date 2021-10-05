@@ -1,0 +1,19 @@
+{
+  "name": "angelpadrino",
+  "version": "1.0.0",
+  "description": "Angel Padrino's website",
+  "main": "index.js",
+  "author": "Angel Padrino <plumreiss@gmail.com> (https://github.com/plumreiss)",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
