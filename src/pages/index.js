@@ -1,3 +1,5 @@
+import { PROJECTS } from "../constants";
+
 import Image from "next/image";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -37,6 +39,31 @@ export default function Main() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Projects</h2>
+        <div>
+          {PROJECTS.map(({ id, name, url, img, sourceCode }) => (
+            <div key={id}>
+              <div>
+                <Image src={img} width={200} height={200} />
+              </div>
+              <div>
+                <h3>{name}</h3>
+              </div>
+              <div>
+                <a href={sourceCode} target="_blank" rel="noopener noreferrer">
+                  Source Code
+                </a>
+
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  Site Live
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
