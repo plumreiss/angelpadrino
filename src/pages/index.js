@@ -1,4 +1,4 @@
-import { Title, Paragraph } from "../components";
+import { Title, Subtitle, Paragraph } from "../components";
 import { PROJECTS } from "../constants";
 
 import Image from "next/image";
@@ -21,7 +21,7 @@ export default function Main() {
       </div>
 
       <div>
-        <h2>About me</h2>
+        <Subtitle>About me</Subtitle>
         <div>
           <div>
             <Image
@@ -44,7 +44,7 @@ export default function Main() {
       </div>
 
       <div>
-        <h2>Projects</h2>
+        <Subtitle>Projects</Subtitle>
         <div>
           {PROJECTS.map(({ id, name, url, img, sourceCode }) => (
             <div key={id}>
