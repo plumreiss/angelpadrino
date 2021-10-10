@@ -1,3 +1,4 @@
+import { Title } from "../components";
 import { PROJECTS } from "../constants";
 
 import Image from "next/image";
@@ -13,7 +14,7 @@ export default function Main() {
           width={200}
           alt="Angel Padrino"
         />
-        <h1>Hey there! I'm a Fronted Developer</h1>
+        <Title> Hey there! I'm a Fronted Developer</Title>
         <FaInstagram />
         <FaLinkedin />
         <FaGithub />
