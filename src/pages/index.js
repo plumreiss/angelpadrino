@@ -1,5 +1,5 @@
 import {
-  Title,
+  Presentation,
   Box,
   Article,
   Subtitle,
@@ -7,34 +7,15 @@ import {
   Paragraph,
   Section,
 } from "../components";
-import { PROJECTS, SOCIAL_NETWORKS } from "../constants";
+
+import { PROJECTS } from "../constants";
 
 import Image from "next/image";
-import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Main() {
   return (
     <>
-      <Section>
-        <Image
-          src="/my-profile-photo.jpg"
-          height={200}
-          width={200}
-          alt="Angel Padrino"
-        />
-        <Title> Hey there! I'm a Fronted Developer</Title>
-        <Box>
-          <Link url={SOCIAL_NETWORKS["instagram"]}>
-            <FaInstagram />
-          </Link>
-          <Link url={SOCIAL_NETWORKS["linkedin"]}>
-            <FaLinkedin />
-          </Link>
-          <Link url={SOCIAL_NETWORKS["github"]}>
-            <FaGithub />
-          </Link>
-        </Box>
-      </Section>
+      <Presentation />
 
       <Section>
         <Subtitle>About me</Subtitle>
@@ -58,7 +39,6 @@ export default function Main() {
           </Box>
         </Article>
       </Section>
-
       <Section>
         <Subtitle>Projects</Subtitle>
         <Box>
@@ -71,17 +51,9 @@ export default function Main() {
                 <h3>{name}</h3>
               </Box>
               <Box>
-                <Link
-                  href={sourceCode}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Source Code
-                </Link>
+                <Link url={sourceCode}>Source Code</Link>
 
-                <Link href={url} target="_blank" rel="noopener noreferrer">
-                  Site Live
-                </Link>
+                <Link url={url}>Site Live</Link>
               </Box>
             </Article>
           ))}
