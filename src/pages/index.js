@@ -1,4 +1,4 @@
-import { Title, Subtitle, Paragraph, Section } from "../components";
+import { Title, Box, Subtitle, Paragraph, Section } from "../components";
 import { PROJECTS } from "../constants";
 
 import Image from "next/image";
@@ -6,7 +6,7 @@ import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Main() {
   return (
-    <div>
+    <>
       <Section>
         <Image
           src="/my-profile-photo.jpg"
@@ -15,9 +15,11 @@ export default function Main() {
           alt="Angel Padrino"
         />
         <Title> Hey there! I'm a Fronted Developer</Title>
-        <FaInstagram />
-        <FaLinkedin />
-        <FaGithub />
+        <Box>
+          <FaInstagram />
+          <FaLinkedin />
+          <FaGithub />
+        </Box>
       </Section>
 
       <Section>
@@ -47,14 +49,14 @@ export default function Main() {
         <Subtitle>Projects</Subtitle>
         <div>
           {PROJECTS.map(({ id, name, url, img, sourceCode }) => (
-            <div key={id}>
-              <div>
+            <Box key={id}>
+              <Box>
                 <Image src={img} width={200} height={200} />
-              </div>
-              <div>
+              </Box>
+              <Box>
                 <h3>{name}</h3>
-              </div>
-              <div>
+              </Box>
+              <Box>
                 <a href={sourceCode} target="_blank" rel="noopener noreferrer">
                   Source Code
                 </a>
@@ -62,11 +64,11 @@ export default function Main() {
                 <a href={url} target="_blank" rel="noopener noreferrer">
                   Site Live
                 </a>
-              </div>
-            </div>
+              </Box>
+            </Box>
           ))}
         </div>
       </Section>
-    </div>
+    </>
   );
 }
