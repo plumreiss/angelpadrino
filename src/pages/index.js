@@ -1,4 +1,11 @@
-import { Title, Box, Subtitle, Paragraph, Section } from "../components";
+import {
+  Title,
+  Box,
+  Article,
+  Subtitle,
+  Paragraph,
+  Section,
+} from "../components";
 import { PROJECTS } from "../constants";
 
 import Image from "next/image";
@@ -24,15 +31,15 @@ export default function Main() {
 
       <Section>
         <Subtitle>About me</Subtitle>
-        <div>
-          <div>
+        <Article>
+          <Box>
             <Image
               src="/my-profile-photo.jpg"
               height={200}
               width={200}
               alt="Angel Padrino"
             />
-            <div>
+            <Box>
               <Paragraph>
                 Quis quis consectetur consectetur non qui non magna cupidatat eu
                 ea excepteur est. Nostrud sint in cillum mollit magna non
@@ -40,16 +47,16 @@ export default function Main() {
                 occaecat adipisicing exercitation culpa. In sunt excepteur sit
                 ea ea et aliquip ex et ut ad.
               </Paragraph>
-            </div>
-          </div>
-        </div>
+            </Box>
+          </Box>
+        </Article>
       </Section>
 
       <Section>
         <Subtitle>Projects</Subtitle>
-        <div>
+        <Box>
           {PROJECTS.map(({ id, name, url, img, sourceCode }) => (
-            <Box key={id}>
+            <Article key={id}>
               <Box>
                 <Image src={img} width={200} height={200} />
               </Box>
@@ -65,9 +72,9 @@ export default function Main() {
                   Site Live
                 </a>
               </Box>
-            </Box>
+            </Article>
           ))}
-        </div>
+        </Box>
       </Section>
     </>
   );
