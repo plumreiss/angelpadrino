@@ -1,4 +1,4 @@
-import { Title, Subtitle, Paragraph } from "../components";
+import { Title, Subtitle, Paragraph, Section } from "../components";
 import { PROJECTS } from "../constants";
 
 import Image from "next/image";
@@ -7,7 +7,7 @@ import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 export default function Main() {
   return (
     <div>
-      <div>
+      <Section>
         <Image
           src="/my-profile-photo.jpg"
           height={200}
@@ -18,9 +18,9 @@ export default function Main() {
         <FaInstagram />
         <FaLinkedin />
         <FaGithub />
-      </div>
+      </Section>
 
-      <div>
+      <Section>
         <Subtitle>About me</Subtitle>
         <div>
           <div>
@@ -41,9 +41,9 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </div>
+      </Section>
 
-      <div>
+      <Section>
         <Subtitle>Projects</Subtitle>
         <div>
           {PROJECTS.map(({ id, name, url, img, sourceCode }) => (
@@ -66,7 +66,7 @@ export default function Main() {
             </div>
           ))}
         </div>
-      </div>
+      </Section>
     </div>
   );
 }
