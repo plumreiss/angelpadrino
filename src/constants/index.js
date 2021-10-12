@@ -7,3 +7,9 @@ export const PROJECTS = [
     sourceCode: "https://github.com/plumreiss/ricknedy",
   },
 ];
+
+export const SOCIAL_NETWORKS = {
+  instagram: "https://www.instagram.com/angel.padrino04",
+  linkedin: "https://linkedin.com/in/angel-padrino",
+  github: "https://github.com/plumreiss",
+};
