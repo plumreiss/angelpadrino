@@ -3,10 +3,11 @@ import {
   Box,
   Article,
   Subtitle,
+  Link,
   Paragraph,
   Section,
 } from "../components";
-import { PROJECTS } from "../constants";
+import { PROJECTS, SOCIAL_NETWORKS } from "../constants";
 
 import Image from "next/image";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
@@ -23,9 +24,15 @@ export default function Main() {
         />
         <Title> Hey there! I'm a Fronted Developer</Title>
         <Box>
-          <FaInstagram />
-          <FaLinkedin />
-          <FaGithub />
+          <Link url={SOCIAL_NETWORKS["instagram"]}>
+            <FaInstagram />
+          </Link>
+          <Link url={SOCIAL_NETWORKS["linkedin"]}>
+            <FaLinkedin />
+          </Link>
+          <Link url={SOCIAL_NETWORKS["github"]}>
+            <FaGithub />
+          </Link>
         </Box>
       </Section>
 
@@ -64,13 +71,17 @@ export default function Main() {
                 <h3>{name}</h3>
               </Box>
               <Box>
-                <a href={sourceCode} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={sourceCode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Source Code
-                </a>
+                </Link>
 
-                <a href={url} target="_blank" rel="noopener noreferrer">
+                <Link href={url} target="_blank" rel="noopener noreferrer">
                   Site Live
-                </a>
+                </Link>
               </Box>
             </Article>
           ))}
