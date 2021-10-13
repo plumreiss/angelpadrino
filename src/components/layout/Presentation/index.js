@@ -8,7 +8,7 @@ import { SOCIAL_NETWORKS } from "../../../constants";
 
 export function Presentation() {
   return (
-    <Section>
+    <Section mh="100vh" >
       <Image
         src="/my-profile-photo.jpg"
         height={200}
