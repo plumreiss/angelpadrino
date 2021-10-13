@@ -9,7 +9,6 @@ import {
   Center,
   WrapperImage,
   Title,
-  Box,
   Link,
 } from "@/components";
 
@@ -29,10 +28,10 @@ export function Presentation() {
           </WrapperImage>
           <Title>Hey there! I'm a Fronted Developer</Title>
           <Row>
-            <Link url={SOCIAL_NETWORKS["instagram"]}>
+            <Link url={SOCIAL_NETWORKS["instagram"]} margin="0 0.3rem 0 0">
               <FaInstagram />
             </Link>
-            <Link url={SOCIAL_NETWORKS["linkedin"]}>
+            <Link url={SOCIAL_NETWORKS["linkedin"]} margin="0 0.3rem 0 0">
               <FaLinkedin />
             </Link>
             <Link url={SOCIAL_NETWORKS["github"]}>
