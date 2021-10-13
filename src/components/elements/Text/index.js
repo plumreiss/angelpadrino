@@ -1,3 +1,3 @@
 export * from "./Title";
-export * from "./SubTitle";
+export * from "./Subtitle";
 export * from "./Paragraph";
