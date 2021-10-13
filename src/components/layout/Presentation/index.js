@@ -5,6 +5,7 @@ import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import {
   Section,
   Col,
+  Row,
   Center,
   WrapperImage,
   Title,
@@ -27,7 +28,7 @@ export function Presentation() {
             />
           </WrapperImage>
           <Title>Hey there! I'm a Fronted Developer</Title>
-          <Box>
+          <Row>
             <Link url={SOCIAL_NETWORKS["instagram"]}>
               <FaInstagram />
             </Link>
@@ -37,7 +38,7 @@ export function Presentation() {
             <Link url={SOCIAL_NETWORKS["github"]}>
               <FaGithub />
             </Link>
-          </Box>
+          </Row>
         </Col>
       </Center>
     </Section>
