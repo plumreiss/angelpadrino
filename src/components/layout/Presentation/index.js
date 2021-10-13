@@ -2,31 +2,44 @@ import Image from "next/image";
 
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
-import { Section, Title, Box, Link } from "../../elements";
+import {
+  Section,
+  Col,
+  Row,
+  Center,
+  WrapperImage,
+  Title,
+  Link,
+} from "@/components";
 
-import { SOCIAL_NETWORKS } from "../../../constants";
+import { SOCIAL_NETWORKS } from "@/constants";
 
 export function Presentation() {
   return (
-    <Section>
-      <Image
-        src="/my-profile-photo.jpg"
-        height={200}
-        width={200}
-        alt="Angel Padrino"
-      />
-      <Title>Hey there! I'm a Fronted Developer</Title>
-      <Box>
-        <Link url={SOCIAL_NETWORKS["instagram"]}>
-          <FaInstagram />
-        </Link>
-        <Link url={SOCIAL_NETWORKS["linkedin"]}>
-          <FaLinkedin />
-        </Link>
-        <Link url={SOCIAL_NETWORKS["github"]}>
-          <FaGithub />
-        </Link>
-      </Box>
+    <Section mh="100vh">
+      <Center>
+        <Col>
+          <WrapperImage>
+            <Image
+              src="/my-profile-photo.jpg"
+              layout="fill"
+              alt="Angel Padrino"
+            />
+          </WrapperImage>
+          <Title>Hey there! I'm a Fronted Developer</Title>
+          <Row>
+            <Link url={SOCIAL_NETWORKS["instagram"]} margin="0 0.3rem 0 0">
+              <FaInstagram />
+            </Link>
+            <Link url={SOCIAL_NETWORKS["linkedin"]} margin="0 0.3rem 0 0">
+              <FaLinkedin />
+            </Link>
+            <Link url={SOCIAL_NETWORKS["github"]}>
+              <FaGithub />
+            </Link>
+          </Row>
+        </Col>
+      </Center>
     </Section>
   );
 }
