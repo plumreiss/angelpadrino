@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledRow = styled.div`
+  display: flex;
   flex-direction: row;
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
