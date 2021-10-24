@@ -3,9 +3,8 @@ import {
   Section,
   Article,
   WrapperImage,
-  Row,
   Subtitle,
-  Box,
+  Row,
   Paragraph,
 } from "@/components";
 
@@ -14,14 +13,20 @@ export function AboutMe() {
     <Section>
       <Subtitle>About me</Subtitle>
       <Article direction="row">
-        <WrapperImage height="200px" width="200px">
+        <WrapperImage height="150px">
           <Image
             src="/my-profile-photo.jpg"
             layout="fill"
             alt="Angel Padrino"
           />
         </WrapperImage>
-        <Box>
+        <Row
+          boxShadow="0px 0px 59px 9px rgba(239,239,247,1)"
+          bg="rgb(255 255 255)"
+          mh="250px"
+          mg="0 0 0 90px"
+          borderRadius="1rem"
+        >
           <Paragraph>
             Quis quis consectetur consectetur non qui non magna cupidatat eu ea
             excepteur est. Nostrud sint in cillum mollit magna non laboris. Esse
@@ -29,7 +34,7 @@ export function AboutMe() {
             exercitation culpa. In sunt excepteur sit ea ea et aliquip ex et ut
             ad.
           </Paragraph>
-        </Box>
+        </Row>
       </Article>
     </Section>
   );
