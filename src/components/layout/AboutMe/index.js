@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useScreen } from "@/hooks";
+
 import {
   Section,
   Article,
@@ -9,10 +11,15 @@ import {
 } from "@/components";
 
 export function AboutMe() {
+  const [isLargeScreen] = useScreen();
+
   return (
     <Section>
       <Subtitle>About me</Subtitle>
-      <Article direction="row">
+      <Article
+        direction={isLargeScreen ? "row" : "column"}
+        alignItems={isLargeScreen ? "" : "center"}
+      >
         <WrapperImage height="150px">
           <Image
             src="/my-profile-photo.jpg"
@@ -24,7 +31,7 @@ export function AboutMe() {
           boxShadow="0px 0px 59px 9px rgba(239,239,247,1)"
           bg="rgb(255 255 255)"
           mh="250px"
-          mg="0 0 0 90px"
+          mg={isLargeScreen ? "0 0 0 90px" : "90px 0 0 0"}
           borderRadius="1rem"
         >
           <Paragraph>
