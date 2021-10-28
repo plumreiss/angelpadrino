@@ -12,7 +12,12 @@ export function useScreen(breakpoint = 799) {
       const widthValue = screen.width;
       widthValue > breakpoint ? largeScreen() : smallScreen();
     };
+
+    window.addEventListener("resize", getScreenWidth);
+
     getScreenWidth();
+
+    return () => window.removeEventListener("resize", getScreenWidth);
   }, []);
 
   return [isLargeScreen];
