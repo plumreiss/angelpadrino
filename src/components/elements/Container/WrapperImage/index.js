@@ -2,23 +2,15 @@ import styled from "styled-components";
 
 const StyledWrapperImage = styled.div`
   position: relative;
-  height: ${({ height }) => height};
-  width: ${({ width }) => width};
+  height: ${({ height }) => height || "200px"};
+  min-width: ${({ mw }) => mw};
+  width: ${({ width }) => width || "200px"};
 
   img {
     border-radius: ${({ rounded }) => rounded || "55%"};
   }
 `;
 
-export function WrapperImage({
-  height = "200px",
-  width = "200px",
-  rounded,
-  children,
-}) {
-  return (
-    <StyledWrapperImage height={height} width={width} rounded={rounded}>
-      {children}
-    </StyledWrapperImage>
-  );
+export function WrapperImage({ children, ...rest }) {
+  return <StyledWrapperImage {...rest}>{children}</StyledWrapperImage>;
 }

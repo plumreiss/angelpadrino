@@ -20,7 +20,7 @@ export function AboutMe() {
         direction={isLargeScreen ? "row" : "column"}
         alignItems={isLargeScreen ? "" : "center"}
       >
-        <WrapperImage height="150px" width={isLargeScreen ? "300px" : "150px"}>
+        <WrapperImage height="150px" mw="150px" width="150px">
           <Image
             src="/my-profile-photo.jpg"
             layout="fill"
