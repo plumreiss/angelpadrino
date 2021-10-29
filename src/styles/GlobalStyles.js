@@ -15,4 +15,18 @@ body {
 *, *::after, *::before {
 box-sizing: border-box;
 }
+
+h1, h2, h3 {
+
+  margin: 0.5em 0;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: .75px;
+}
+
+p {
+  font-weight: 700;
+  letter-spacing: 0.75px;
+}
+
 `;
