@@ -9,7 +9,7 @@ padding: 0;
 body {
   margin: 0 auto;
   max-width: 80%;
-  background: rgb(249 249 255 )
+  background: #f9f9ff;
 }
 
 *, *::after, *::before {
@@ -21,12 +21,18 @@ h1, h2, h3 {
   margin: 0.5em 0;
   font-weight: 900;
   line-height: 1.5;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
+  color: #282648;
 }
 
 p {
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.75px;
+  color: #282648;
+}
+
+a {
+  text-decoration: none;
 }
 
 `;
