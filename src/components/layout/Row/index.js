@@ -5,6 +5,7 @@ const StyledRow = styled.div`
   flex-direction: row;
   width: ${({ w }) => w};
   margin: ${({ mg }) => mg};
+  padding: ${({ pd }) => pd};
   min-height: ${({ mh }) => mh};
   background: ${({ bg }) => bg};
   justify-content: ${({ justifyContent }) => justifyContent};

@@ -14,11 +14,12 @@ export function AboutMe() {
   const [isLargeScreen] = useScreen();
 
   return (
-    <Section>
+    <Section pd="1.5rem 0">
       <Subtitle>About me</Subtitle>
       <Article
         direction={isLargeScreen ? "row" : "column"}
         alignItems={isLargeScreen ? "" : "center"}
+        pd="1.5rem 0"
       >
         <WrapperImage height="150px" mw="150px" width="150px">
           <Image
@@ -33,6 +34,7 @@ export function AboutMe() {
           mh="250px"
           mg={isLargeScreen ? "0 0 0 90px" : "90px 0 0 0"}
           borderRadius="1rem"
+          pd="0 1rem"
         >
           <Paragraph>
             Quis quis consectetur consectetur non qui non magna cupidatat eu ea

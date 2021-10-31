@@ -13,6 +13,7 @@ const StyledBox = styled.div`
   align-items: ${({ alignItems }) => alignItems};
   box-shadow: ${({ boxShadow }) => boxShadow};
   border-radius: ${({ borderRadius }) => borderRadius};
+  padding: ${({ pd }) => pd};
 `;
 
 export function Box({ children, ...rest }) {
