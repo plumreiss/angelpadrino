@@ -1,3 +1,10 @@
-export function Subtitle({ children }) {
-  return <h2>{children}</h2>;
+import styled from "styled-components";
+
+const StyledSubtitle = styled.h2`
+  color: ${({ color }) => color};
+  font-size: ${({ fontSize }) => fontSize};
+`;
+
+export function Subtitle({ children, ...rest }) {
+  return <StyledSubtitle {...rest}>{children}</StyledSubtitle>;
 }
