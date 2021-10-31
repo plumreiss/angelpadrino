@@ -14,6 +14,12 @@ const StyledBox = styled.div`
   box-shadow: ${({ boxShadow }) => boxShadow};
   border-radius: ${({ borderRadius }) => borderRadius};
   padding: ${({ pd }) => pd};
+  transition: ${({trans}) => trans};
+  opacity: ${({ opacity }) => opacity};
+
+  &:hover {
+    opacity: ${({ opacityHover }) => opacityHover};
+  }
 `;
 
 export function Box({ children, ...rest }) {
