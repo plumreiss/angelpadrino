@@ -29,7 +29,7 @@ export function AboutMe() {
           />
         </WrapperImage>
         <Row
-          boxShadow="0px 0px 59px 9px rgba(239,239,247,1)"
+          boxShadow="0px 0px 10px 3px rgba(239,239,247,1)"
           bg="rgb(255 255 255)"
           mh="250px"
           mg={isLargeScreen ? "0 0 0 90px" : "90px 0 0 0"}
