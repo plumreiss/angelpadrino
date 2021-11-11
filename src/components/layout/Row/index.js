@@ -8,6 +8,7 @@ const StyledRow = styled.div`
   padding: ${({ pd }) => pd};
   min-height: ${({ mh }) => mh};
   background: ${({ bg }) => bg};
+  flex-wrap: ${({ wrap }) => wrap};
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
   box-shadow: ${({ boxShadow }) => boxShadow};
